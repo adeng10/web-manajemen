@@ -47,7 +47,7 @@
                                         @csrf
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user @error('email')is-invalid @enderror"
-                                                placeholder="Masukkan Email" nama="email" value="{{ old('email') }}">
+                                                placeholder="Masukkan Email" name="email" value="{{ old('email') }}">
                                             @error('email')
                                                 <small class="text-danger">
                                                     {{  $message }}
@@ -57,15 +57,15 @@
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user @error('password')is-invalid @enderror"
-                                                placeholder="Masukkan Password" nama="password">
-                                                @error('password')
+                                                placeholder="Masukkan Password" name="password">
+                                            @error('password')
                                                 <small class="text-danger">
                                                     {{  $message }}
                                                 </small>
                                                 
                                             @enderror
                                         </div>
-                                        <button type ="sumbit" class="btn btn-primary btn-user btn-block">
+                                        <button type ="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
                                     </form>
@@ -93,6 +93,27 @@
     <script src="{{ asset('sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('sbadmin2/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('sbadmin2/js/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('sweetalert2/dist/sweetalert2.all.min.js') }}"></script>
+
+    @session('success')
+        <script>
+            Swal.fire({
+                title: "Sukses!",
+                text: "{{ session('success') }}",
+                icon: "success"
+        });
+        </script>
+    @endsession
+    
+    @session('error')
+        <script>
+            Swal.fire({
+                title: "Gagal!",
+                text: "{{ session('error') }}",
+                icon: "error"
+        });
+        </script>
+    @endsession
 
 </body>
 
