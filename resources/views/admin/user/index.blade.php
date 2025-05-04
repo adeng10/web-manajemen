@@ -15,7 +15,7 @@
                 </a>
             </div>
             <div>
-                <a href="#" class="btn btn-sm btn-success">
+                <a href="{{ route('userExcel') }}" class="btn btn-sm btn-success">
                 <i class="fas fa-file-excel mr-2"></i>    
                 Excel
                 </a>
@@ -66,7 +66,7 @@
                                                     <a href="{{ route('userEdit', $item->id) }}" class="btn btn-sm btn-warning">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal{{ $item->id }}">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                     @include('admin/user/modal')
