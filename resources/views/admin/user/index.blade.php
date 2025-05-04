@@ -66,7 +66,7 @@
                                                     <a href="{{ route('userEdit', $item->id) }}" class="btn btn-sm btn-warning">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal{{ $item->id }}">
+                                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal{{ $item->id }}">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                     @include('admin/user/modal')

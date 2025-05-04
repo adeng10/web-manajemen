@@ -3,9 +3,9 @@
         <div class="modal-content">
             <div class="modal-header bg-danger text-white">
                 <h5 class="modal-title" id="exampleModalLabel{{ $item->id }}">Konfirmasi Hapus {{ $title }}</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Tutup">
-                    <span aria-hidden="true" class="text-white">&times;</span>
-                </button>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
             </div>
             <div class="modal-body text-start">
                 <div class="row mb-2">
@@ -14,11 +14,11 @@
                 </div>
                 <div class="row mb-2">
                     <div class="col-6">Email</div>
-                    <div class="col-6">: <span class="badge bg-primary">{{ $item->email }}</span></div>
+                    <div class="col-6 text-white">: <span class="badge bg-primary">{{ $item->email }}</span></div>
                 </div>
                 <div class="row mb-2">
                     <div class="col-6">Jabatan</div>
-                    <div class="col-6">
+                    <div class="col-6 text-white">
                         : @if ($item->jabatan == 'Admin')
                             <span class="badge bg-dark">{{ $item->jabatan }}</span>
                         @else
@@ -28,7 +28,7 @@
                 </div>
                 <div class="row mb-2">
                     <div class="col-6">Status</div>
-                    <div class="col-6">
+                    <div class="col-6 text-white">
                         : @if ($item->is_tugas == false)
                             <span class="badge bg-danger">Belum Ditugaskan</span>
                         @else

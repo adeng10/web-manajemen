@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('tugas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->text('tugas');
             $table->date('tanggal_mulai');            $table->date('tanggal_selesai');
             $table->timestamps();

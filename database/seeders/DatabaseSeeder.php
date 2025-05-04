@@ -42,5 +42,14 @@ class DatabaseSeeder extends Seeder
             'is_tugas'  => false,
 
         ]);
+
+        User::create([
+            'nama'      => 'giman',
+            'email'     => 'giman@gmail.com',
+            'jabatan'   => 'Karyawan',
+            'password'  => Hash::make('123123123'),
+            'is_tugas'  => false,
+
+        ]);
     }
 }
