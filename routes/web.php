@@ -32,5 +32,8 @@ Route::get('user/excel', [UserController::class, 'excel'])->name('userExcel');
 Route::get('user/pdf', [UserController::class, 'pdf'])->name('userPdf');
 
 // Tugas
-Route::get('tugas', [TugasController::class, 'index'])->name('tugas');  
+Route::get('tugas', [TugasController::class, 'index'])->name('tugas'); 
+Route::get('tugas/create', [TugasController::class, 'create'])->name('tugasCreate'); 
+Route::post('tugas/store', [TugasController::class, 'store'])->name('tugasStore'); 
+
 });
